@@ -387,7 +387,15 @@ HarmonicCylinderPotential::~HarmonicCylinderPotential() {
 DeltaPotential::DeltaPotential(double _sigma, double _g) : PotentialBase() 
 {
     /* Define the parameters of the delta function potential. */
-    norm = _g/sqrt(2.0*_sigma*_sigma*M_PI);
+    //norm = _g/sqrt(2.0*_sigma*_sigma*M_PI); original code 
+    norm = _g;
+    norm *= 1./sqrt(2.0*_sigma*_sigma*M_PI); // normalization prefactor for each dimension 
+    if(NDIM > 1)
+    {
+      norm *= 1./sqrt(2.0*_sigma*_sigma*M_PI); // normalization prefactor for each dimension 
+      if(NDIM > 2)
+        norm *= 1./sqrt(2.0*_sigma*_sigma*M_PI);
+    }
     inv2sigma2 = 1.0/(2.0*_sigma*_sigma);
 }
 
