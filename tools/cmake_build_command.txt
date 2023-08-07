@@ -1,0 +1,2 @@
+cmake ../ -D CMAKE_INSTALL_PREFIX=/home/emcgarrigle/pimc_2D/ -D BOOST_ROOT=/home/emcgarrigle/local/src/boost_1_82_0/ -D NDIM=2
+

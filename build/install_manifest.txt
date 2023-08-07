@@ -1,0 +1,3 @@
+/home/emcgarrigle/pimc/bin/pimc.e
+/home/emcgarrigle/pimc/share/pimc.e/cmake/pimc.eConfig.cmake
+/home/emcgarrigle/pimc/share/pimc.e/cmake/pimc.eConfig-none.cmake
